@@ -21,6 +21,13 @@ build自动下载
 3. [GlobalPlatformPro](https://github.com/martinpaljak/GlobalPlatformPro/releases/download/v25.10.20/gp.jar)
 放置到`tools`
 
+### 修改密钥
+`tools/runtest.sh`文件内为默认密钥，修改为你的
+  
+    ENC="bd4dc7cad88ae968fe5bc814d88d10a0"
+    MAC="a060b868d75e7afcacd4d9186d8509cc"
+    DEK="562825306ede1b80b757a1e5ece54005"
+
 ### 编译运行
 ```bash
 # 安装必要工具
