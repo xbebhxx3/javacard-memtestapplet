@@ -8,6 +8,10 @@
 
 ---
 
+## 已知问题
+在使用vpcd测试时，默认的timeout 500可能会断连，可以修改为30s使用
+acr1252u没这问题
+
 ## 环境依赖
 1. [ant-javacard](https://github.com/martinpaljak/ant-javacard)
 build自动下载
