@@ -2,14 +2,14 @@ package com.tester;
 
 import javacard.framework.*;
 
-public class MemoryProbe extends Applet {
+public class memtest extends Applet {
     // 探测步长：1KB (1024字节)
     private static final short STEP_SIZE = 1024;
     // 自定义探测指令 INS
     private static final byte INS_PROBE = (byte) 0x10;
 
     public static void install(byte[] bArray, short bOffset, byte bLen) {
-        new MemoryProbe().register();
+        new memtest().register();
     }
 
     public void process(APDU apdu) {

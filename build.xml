@@ -1,4 +1,4 @@
-<project name="MemoryProbe" default="build">
+<project name="memtest" default="build">
 <get src="https://github.com/martinpaljak/ant-javacard/releases/latest/download/ant-javacard.jar" dest="tools" skipexisting="true"/>
     <taskdef name="javacard" classname="pro.javacard.ant.JavaCard" classpath="tools/ant-javacard.jar"/>
 
@@ -6,9 +6,9 @@
         <javacard>
             <cap jckit="sdks/jc305u4_kit" 
                  sources="src" 
-                 output="bin/MemoryProbe.cap" 
+                 output="bin/memtest.cap" 
                  aid="F06D656D74657374">
-                <applet class="com.tester.MemoryProbe" aid="F06D656D7465737401"/>
+                <applet class="com.tester.memtest" aid="F06D656D7465737401"/>
             </cap>
         </javacard>
     </target>

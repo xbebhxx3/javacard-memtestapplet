@@ -9,7 +9,8 @@
 ---
 
 ## 已知问题
-在使用vpcd测试时，默认的timeout 500可能会断连，可以修改为30s使用
+在使用vpcd测试时，默认的timeout 500ms可能会断连，可以修改为30s使用
+
 acr1252u没这问题
 
 ## 环境依赖
@@ -20,7 +21,7 @@ build自动下载
 3. [GlobalPlatformPro](https://github.com/martinpaljak/GlobalPlatformPro/releases/download/v25.10.20/gp.jar)
 放置到`tools`
 
-### 1. linux编译
+### 编译运行
 ```bash
 # 安装必要工具
 sudo apt-get install openjdk-11-jdk ant -y
@@ -43,4 +44,23 @@ ant
 
 # 运行
 tools/runtest.sh
+```
+
+### 下载直接运行
+```bash
+sudo apt-get install openjdk-11-jdk
+
+git clone https://github.com/xbebhxx3/javacard-memtestapplet.git
+cd javacard-memtestapplet
+
+wget -O tools/gp.jar https://github.com/martinpaljak/GlobalPlatformPro/releases/download/v25.10.20/gp.jar
+
+# 下载releases
+# 验证 PGP: 2B4D C954 E2CA 4D00 54DC 1189 6C85 5A8B 595C 1CC4
+gpg --recv-keys 6C855A8B595C1CC4
+gpg --verify memtest.cap.asc memtest.cap
+
+cp ***/memtest.cap ./bin 
+
+./tools/runtest.sh
 ```

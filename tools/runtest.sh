@@ -14,7 +14,7 @@ N='\033[0m'    # No Color
 # 参数配置
 # ==========================================
 GP_JAR="tools/gp.jar"
-CAP_FILE="bin/MemoryProbe.cap"
+CAP_FILE="bin/memtest.cap"
 
 ENC="bd4dc7cad88ae968fe5bc814d88d10a0"
 MAC="a060b868d75e7afcacd4d9186d8509cc"
